@@ -30,7 +30,7 @@ export default function VendingMachineItems({
     <Card variant="outlined" className={classes.card}>
       <CardContent>
         <Typography variant="h4" align="center">
-          DXC Vending Machine Items
+          Vending Machine Items:
         </Typography>
         <ul>
           {Object.keys(items).map((item) => (

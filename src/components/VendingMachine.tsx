@@ -1,7 +1,7 @@
 "use client";
 
-import { BaseSyntheticEvent, useEffect, useState } from "react";
 import { GET } from "../app/api/route";
+import { BaseSyntheticEvent, useEffect, useState } from "react";
 import { Dispatch, SetStateAction } from "react";
 import { NextResponse } from "next/server";
 import { Container, Snackbar, Typography, Theme } from "@mui/material";

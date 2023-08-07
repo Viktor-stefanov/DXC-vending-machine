@@ -1,3 +1,6 @@
+ear
 node_modules
 .next
 package-lock.json
+todo.txt
+.gitignore

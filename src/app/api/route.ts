@@ -15,7 +15,7 @@ const vendingItems = {
 
 export async function GET() {
   const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-  await sleep(1000);
+  await sleep(1500);
 
   return NextResponse.json(vendingItems);
 }
