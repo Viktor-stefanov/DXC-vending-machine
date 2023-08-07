@@ -13,10 +13,12 @@ cd ./DXC-vending-machine
 Second, install the dependencies:
 
 ```
-npm i
+npm i --legacy-peer-deps
 # or
-yarn add
+yarn install --force
 ```
+
+The --legacy-peer-deps / --force argument is needed because MUI v5 uses some legacy peer dependancies that react v18 considers 'old'. But as it is discussed [here](https://github.com/mui/material-ui/issues/32074) it is adviced to simply ignore this error as it is trivial and everything is working intact.
 
 Finally, run the development server locally:
 
