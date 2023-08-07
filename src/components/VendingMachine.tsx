@@ -9,6 +9,7 @@ import { makeStyles } from "@mui/styles";
 import VendingMachineItems from "./VendingMachineItems";
 import VendingMachineInsertor from "./VendingMachineInsertor";
 import VendingMachineItemInsertor from "./VendingMachineItemInsertor";
+import BigNumber from "bignumber.js";
 
 const coinDenominations = [0.01, 0.05, 0.1, 0.25, 0.5, 1],
   cashDenominations = [1, 2, 5, 10, 20, 50, 100];
@@ -82,12 +83,11 @@ export default function VendingMachine() {
         `Insert ${items[item].price - insertedMoney}$ more to buy this item.`
       );
 
-    setMessage(
-      `${item} sucessfully bought and your change is ${
-        insertedMoney - items[item].price
-      }$`
-    );
-    setInsertedMoney(insertedMoney - items[item].price);
+    const change = new BigNumber(insertedMoney)
+      .minus(items[item].price)
+      .toNumber();
+    setMessage(`${item} sucessfully bought and your change is ${change}$`);
+    setInsertedMoney(change);
     setItems({
       ...items,
       [item]: { ...items[item], quantity: items[item].quantity - 1 },
@@ -154,7 +154,8 @@ export default function VendingMachine() {
       return setMessage("Invalid cash type.");
     else if (amount > 100) return setMessage("Please enter a valid amount");
 
-    setInsertedMoney(insertedMoney + amount);
+    const coins = new BigNumber(insertedMoney).plus(amount).toNumber();
+    setInsertedMoney(coins);
   }
 
   return (

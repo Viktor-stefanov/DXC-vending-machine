@@ -33,10 +33,10 @@ export default function Error({
 
   return (
     <Container maxWidth="sm" className={classes.container}>
-      <Typography variant="h1" className={classes.errorText}>
+      <Typography variant="h2" className={classes.errorText}>
         An error occured while using the application
       </Typography>
-      <Typography variant="h4" className={classes.errorText}>
+      <Typography variant="h5" className={classes.errorText}>
         {error.message}
       </Typography>
       <Button onClick={reset} variant="contained">

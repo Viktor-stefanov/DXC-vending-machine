@@ -20,4 +20,4 @@ yarn run dev
 
 This will spin up a local development server. Now you can open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-This project utilizes TS, React + NextJS and MaterialUI v5 to make the UI visually appealing and responsive.
+This project utilizes TS, React + NextJS and MaterialUI v5 to make the UI visually appealing and responsive. Arithemtic operations are done using bignumber.js library to avoid floating point errors (0.1 + 0.1 + 0.1 !== 0.3).
