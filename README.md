@@ -2,7 +2,15 @@ This is a DXC Technology project that implements the functionality of a real lif
 
 ## Project setup
 
-First, install the dependencies
+First, clone the project and cd into it:
+```
+# cd to the directory you want to clone the projct at e.g.
+cd ~/Dev/Interview
+git clone <url_of_this_repository>
+cd ./DXC-vending-machine
+```
+
+Second, install the dependencies:
 
 ```
 npm i
@@ -10,7 +18,7 @@ npm i
 yarn add
 ```
 
-Second, run the development server locally
+Finally, run the development server locally:
 
 ```bash
 npm run dev
